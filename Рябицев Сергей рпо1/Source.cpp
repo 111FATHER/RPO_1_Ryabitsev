@@ -209,6 +209,8 @@ int main()
 		{
 			std::cout << mas[i] << " ";
 		}
+		std::cout << "k";
+
 	}
 	
 
