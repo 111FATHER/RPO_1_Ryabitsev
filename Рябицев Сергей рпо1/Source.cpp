@@ -237,27 +237,37 @@ int main()
 	std::cout << "\n";
 
 	int arr2[row][col]{ {},{},{} };
-	int sum1 = 0, sum2 = 0, kol = 0;
+	int sum1 = 0, sum2 = 0, kol = 0, str = 0;
 	for (int i = 0; i < 3; i++)
 	{
 		for (int j = 0; j < 5; j++)
 		{
-			arr[i][j] = rand() % 10;
+			arr[i][j] = rand() % 100;
 		}
 	}
 	for (int i = 0; i < 3; i++)
 	{
 		for (int j = 0; j < 5; j++)
 		{
-			std::cout << arr[i][j] << " ";
+			std::cout << arr[i][j] << "\t";
 			sum1 = sum1 + arr[i][j];
 		}
-		std::cout << "|" << sum1 << std::endl;
+		std::cout << "\t|\t" << sum1 << std::endl;
 		sum1 = 0;
 	}
-	
-	
-	
+	std::cout << "----------------------------------------------------------------\n";
+	sum1 = 0;
+	for (int j = 0; j < 5; j++)
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			sum1 = sum1 + arr[i][j];
+		}
+		std::cout << sum1 << "\t";
+		str = str + sum1;
+		sum1 = 0;
+	}
+	std::cout << "\t|\t" << str << "\n";
 
 
 
