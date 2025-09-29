@@ -1,9 +1,12 @@
 #include <iostream>
 #include <cstdlib>
+#include <Windows.h>
 int main()
 {
 
-	setlocale(LC_ALL, "ru");
+	//setlocale(LC_ALL, "ru");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	srand(time(NULL));
 /*int g;
 	std::cout << "введите 1 или 2\n";
@@ -187,41 +190,80 @@ int main()
 //	sum = sum + mas[i];
 //}
 //std::cout << "сумма " << mas;
+//int mas[10]{};
+	//for (int i = 0; i < 10; i++)
+	//	{
+	//	mas[i] = rand() % 29 - 15;
+	//	std::cout << mas[i] << " ";
+	//}
+	//std::cout << "\n";
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	if (mas[i] >= 0);
+	//	{
+	//		std::cout << mas[i] << " ";
+	//	}
+	//}
+	//std::cout << "\n";
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	if (mas[i] < 0)
+	//	{
+	//		std::cout << mas[i] << " ";
+	//	}
+	//	std::cout << "k";
+	//}
 	
-	int mas[10]{};
-	for (int i = 0; i < 10; i++)
-		{
-		mas[i] = rand() % 29 - 15;
-		std::cout << mas[i] << " ";
-	}
-	std::cout << "\n";
-	for (int i = 0; i < 10; i++)
+	const int col = 5;
+	const int row = 3;
+	int arr[row][col];
+	for (int i = 0; i < 3; i++)
 	{
-		if (mas[i] >= 0);
+		for (int j = 0; j < 5; j++)
 		{
-			std::cout << mas[i] << " ";
+			arr[i][j] = rand() % 10 + 1;
 		}
 	}
-	std::cout << "\n";
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 3; i++)
 	{
-		if (mas[i] < 0)
+		for (int j = 0; j < 5; j++)
 		{
-			std::cout << mas[i] << " ";
+			std::cout << arr[i][j] << " ";
 		}
-		std::cout << "k";
-
+		std::cout << "\n";
 	}
+	std::cout << "\n";
+	std::cout << "\n";
+	std::cout << "\n";
+
+	int arr2[row][col]{ {},{},{} };
+	int sum1 = 0, sum2 = 0, kol = 0;
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 5; j++)
+		{
+			arr[i][j] = rand() % 10;
+		}
+	}
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 5; j++)
+		{
+			std::cout << arr[i][j] << " ";
+			sum1 = sum1 + arr[i][j];
+		}
+		std::cout << "|" << sum1 << std::endl;
+		sum1 = 0;
+	}
+	
+	
 	
 
 
 
-
-
-
-
-
-
+	
+	
+	
 
 
 	
