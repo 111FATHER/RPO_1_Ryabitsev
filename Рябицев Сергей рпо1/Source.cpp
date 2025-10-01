@@ -15,12 +15,45 @@
 
 */
 
-void PrintHelloWorld()
+//void PrintHelloWorld()
+//{
+//	std::cout << "Hello world\n";
+//
+//
+//}
+//void Printint(int number)
+//{
+//	std::cout << number;
+//}
+//void Addnumber(int num)
+//{
+//	num++;
+//}
+//int SetNumber(int number)
+//{
+//	return number + 10;
+//}
+
+
+
+float plus(float num, float num1)
 {
-	std::cout << "Hello world\n";
-
-
+	return num + num1;
 }
+float minus(float num, float num1)
+{
+	return num - num1;
+}
+float del(float num, float num1)
+{
+	return num / num1;
+}
+float um(float num, float num1)
+{
+	return num * num1;
+}
+
+
 
 
 int main()
@@ -31,7 +64,62 @@ int main()
 	SetConsoleOutputCP(1251);
 	srand(time(NULL));
 
-	PrintHelloWorld();
+	float choose, num, num1;
+	std::cout << "Выберите нужную функцию 1(+), 2(-), 3(/), 4(*) - ";
+	std::cin >> choose;
+
+		while (true)
+		{
+			if (choose < 1 || choose > 4)
+			{
+				std::cout << "Ошибка\t\n";
+				std::cout << "Введите заного номер функции - ";
+				std::cin >> choose;
+			}
+			else
+			{
+				break;
+			}
+		}
+		std::cout << "Введите первое число - ";
+		std::cin >> num;
+		std::cout << "Введите второе число - ";
+		std::cin >> num1;
+		if (choose == 1)
+		{
+			std::cout << "Ваше число - " << plus(num, num1);
+		}
+		else if (choose == 2)
+		{
+			std::cout << "Ваше число - " << minus(num, num1);
+		}
+		else if (choose == 3)
+		{
+			while (true)
+			{
+				if (num1 == 0)
+				{
+					std::cout << "деление на 0 невозможно, введите еще раз второе число - ";
+					std::cin >> num1;
+				}
+				else
+				{
+					break;
+				}
+			}
+			std::cout << "Ваше число - " << del(num, num1);
+		}
+		else if (choose == 4)
+		{
+			std::cout << "Ваше число - " << um(num, num1);
+		}
+
+
+	
+
+
+
+
 
 /*int g;
 	std::cout << "введите 1 или 2\n";
