@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <Windows.h>
-
+#include <iomanip>
 
 /*
 
@@ -34,24 +34,100 @@
 //	return number + 10;
 //}
 
+//float plus(float num, float num1)
+//{
+//	return num + num1;
+//}
+//float minus(float num, float num1)
+//{
+//	return num - num1;
+//}
+//float del(float num, float num1)
+//{
+//	return num / num1;
+//}
+//float um(float num, float num1)
+//{
+//	return num * num1;
+//}
+
+void PrintArray(int mass1[])
+{
+	for (int i = 0; i < 5; i++)
+	{
+		std::cout << mass1[i] << " ";
+	}
+	std::cout << "\n";
+}
+void PrintArray(char mass2[])
+{
+	for (int i = 0; i < 5; i++)
+	{
+		std::cout << mass2[i] << " ";
+	}
+	std::cout << "\n";
+}
+void PrintArray(bool mass3[])
+{
+	for (int i = 0; i < 5; i++)
+	{
+		std::cout << mass3[i] << " ";
+	}
+	std::cout << "\n";
+}
+
+void SetArray(int mass1[])
+{
+	for (int i = 0; i < 5; i++)
+	{
+		mass1[i] = rand() % 100;
+	}
+	PrintArray(mass1);
+}
+void SetArray(char mass2[])
+{
+	for (int i = 0; i < 5; i++)
+	{
+		mass2[i] = rand() % 58 + 65;
+	}
+	PrintArray(mass2);
+}
+void SetArray(bool mass3[])
+{
+	for (int i = 0; i < 5; i++)
+	{
+		mass3[i] = rand() % 2;
+	}
+	PrintArray(mass3);
+}
 
 
-float plus(float num, float num1)
+
+template<typename T, typename yes>
+T Sum(T first, yes second)
 {
-	return num + num1;
+	return (yes)(first + second);
 }
-float minus(float num, float num1)
+
+int Fak(int n)
 {
-	return num - num1;
+	if (n < 0)
+	{
+		return 0;
+	}
+	if (n == 0)
+	{
+		return 1;
+	}
+	else
+	{
+		return n * Fak(n - 1);
+	}
 }
-float del(float num, float num1)
-{
-	return num / num1;
-}
-float um(float num, float num1)
-{
-	return num * num1;
-}
+
+
+
+
 
 
 
@@ -63,8 +139,9 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	srand(time(NULL));
+	
 
-	float choose, num, num1;
+/*	float choose, num, num1;
 	std::cout << "Выберите нужную функцию 1(+), 2(-), 3(/), 4(*) - ";
 	std::cin >> choose;
 
@@ -112,14 +189,7 @@ int main()
 		else if (choose == 4)
 		{
 			std::cout << "Ваше число - " << um(num, num1);
-		}
-
-
-	
-
-
-
-
+		}*/
 
 /*int g;
 	std::cout << "введите 1 или 2\n";
@@ -388,18 +458,42 @@ int mas[10]{};
 	std::cout << "\t|\t" << str << "\n";*/
 
 
+//до Пн
+//inline функции и его подвиды
 
 
+
+	int mass1[5]{};
+	SetArray(mass1);
+	char mass2[5]{};
+	SetArray(mass2);
+	bool mass3[5]{};
+	SetArray(mass3);
 
 	
 
-	
+
+	std::cout << Sum(3, 4) << Sum(4.3, 5.4);
+
+	std::cout << Fak(5);
 
 
 
 
 
-	
+
+
+
+
 	return 0;
 
+
 }
+
+
+
+
+
+
+
+
