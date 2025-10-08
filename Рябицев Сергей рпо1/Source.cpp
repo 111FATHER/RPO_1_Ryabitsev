@@ -15,25 +15,6 @@
 
 */
 
-//void PrintHelloWorld()
-//{
-//	std::cout << "Hello world\n";
-//
-//
-//}
-//void Printint(int number)
-//{
-//	std::cout << number;
-//}
-//void Addnumber(int num)
-//{
-//	num++;
-//}
-//int SetNumber(int number)
-//{
-//	return number + 10;
-//}
-
 //float plus(float num, float num1)
 //{
 //	return num + num1;
@@ -51,95 +32,77 @@
 //	return num * num1;
 //}
 
-void PrintArray(int mass1[])
-{
-	for (int i = 0; i < 5; i++)
-	{
-		std::cout << mass1[i] << " ";
-	}
-	std::cout << "\n";
-}
-void PrintArray(char mass2[])
-{
-	for (int i = 0; i < 5; i++)
-	{
-		std::cout << mass2[i] << " ";
-	}
-	std::cout << "\n";
-}
-void PrintArray(bool mass3[])
-{
-	for (int i = 0; i < 5; i++)
-	{
-		std::cout << mass3[i] << " ";
-	}
-	std::cout << "\n";
-}
-
-void SetArray(int mass1[])
-{
-	for (int i = 0; i < 5; i++)
-	{
-		mass1[i] = rand() % 100;
-	}
-	PrintArray(mass1);
-}
-void SetArray(char mass2[])
-{
-	for (int i = 0; i < 5; i++)
-	{
-		mass2[i] = rand() % 58 + 65;
-	}
-	PrintArray(mass2);
-}
-void SetArray(bool mass3[])
-{
-	for (int i = 0; i < 5; i++)
-	{
-		mass3[i] = rand() % 2;
-	}
-	PrintArray(mass3);
-}
-
-
-
-template<typename T, typename yes>
-T Sum(T first, yes second)
-{
-	return (yes)(first + second);
-}
-
-int Fak(int n)
-{
-	if (n < 0)
-	{
-		return 0;
-	}
-	if (n == 0)
-	{
-		return 1;
-	}
-	else
-	{
-		return n * Fak(n - 1);
-	}
-}
-
-
-
-
-
-
-
-
-int main()
-{
-
-	//setlocale(LC_ALL, "ru");
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
-	srand(time(NULL));
-	
+//void PrintArray(int mass1[])
+//{
+//	for (int i = 0; i < 5; i++)
+//	{
+//		std::cout << mass1[i] << " ";
+//	}
+//	std::cout << "\n";
+//}
+//void PrintArray(char mass2[])
+//{
+//	for (int i = 0; i < 5; i++)
+//	{
+//		std::cout << mass2[i] << " ";
+//	}
+//	std::cout << "\n";
+//}
+//void PrintArray(bool mass3[])
+//{
+//	for (int i = 0; i < 5; i++)
+//	{
+//		std::cout << mass3[i] << " ";
+//	}
+//	std::cout << "\n";
+//}
+//
+//void SetArray(int mass1[])
+//{
+//	for (int i = 0; i < 5; i++)
+//	{
+//		mass1[i] = rand() % 100;
+//	}
+//	PrintArray(mass1);
+//}
+//void SetArray(char mass2[])
+//{
+//	for (int i = 0; i < 5; i++)
+//	{
+//		mass2[i] = rand() % 58 + 65;
+//	}
+//	PrintArray(mass2);
+//}
+//void SetArray(bool mass3[])
+//{
+//	for (int i = 0; i < 5; i++)
+//	{
+//		mass3[i] = rand() % 2;
+//	}
+//	PrintArray(mass3);
+//}
+//
+//template<typename T, typename yes>
+//T Sum(T first, yes second)
+//{
+//	return (yes)(first + second);
+//}
+//
+//int Fak(int n)
+//{
+//	if (n < 0)
+//	{
+//		return 0;
+//	}
+//	if (n == 0)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return n * Fak(n - 1);
+//	}
+//}
 
 /*	float choose, num, num1;
 	std::cout << "Выберите нужную функцию 1(+), 2(-), 3(/), 4(*) - ";
@@ -191,41 +154,6 @@ int main()
 			std::cout << "Ваше число - " << um(num, num1);
 		}*/
 
-/*int g;
-	std::cout << "введите 1 или 2\n";
-	std::cin >> g;
-	switch (g)
-	{
-	case 1:
-		std::cout << "\nФарит";
-		break;
-	case 2:
-		std::cout << "\nИгорь";
-		break;
-	default:
-		std::cout << "Под таким символом нет значения";
-		break;
-
-	
-
-	}
-
-
-	int choose = 0;
-	std::cin >> choose;
-	if (choose == 1)
-	{
-		std::cout << "Кирилл";
-	}
-	else if (choose == 2)
-	{
-		std::cout << "Демьян";
-	}
-	else
-	{
-		std::cout << "ввв";
-	}*/	
-
 /*int one, two, choose;
 	std::cout << "Введите первое число: \n";
 	std::cin >> one;
@@ -253,22 +181,6 @@ int main()
 	else
 	{
 		std::cout << "нет такого действия";
-	}*/
-
-/*int f = 0, g = 0;
-	char star = '*';
-	while (g < 8)
-	{
-
-		f = 0;
-		while (f < 5)
-		{
-			std::cout << star ;
-			std::cout << " ";
-			f++;
-		}
-		std::cout << "\n";
-		g++;
 	}*/
 
 /*int rub, value, again = 0;
@@ -457,13 +369,10 @@ int mas[10]{};
 	}
 	std::cout << "\t|\t" << str << "\n";*/
 
-
 //до Пн
 //inline функции и его подвиды
 
-
-
-	int mass1[5]{};
+/*int mass1[5]{};
 	SetArray(mass1);
 	char mass2[5]{};
 	SetArray(mass2);
@@ -475,15 +384,85 @@ int mas[10]{};
 
 	std::cout << Sum(3, 4) << Sum(4.3, 5.4);
 
-	std::cout << Fak(5);
+	std::cout << Fak(5);*/
 
 
 
 
 
 
+int main()
+{
+
+	//setlocale(LC_ALL, "ru");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	srand(time(NULL));
 
 
+//_________________________
+//ЗАДАНИЕ 1
+
+	int t, s;
+	std::cout << "Введите расстояние в киллометрах - ";
+	std::cin >> s;
+	std::cout << "Введите время в минутах - ";
+	std::cin >> t;
+	std::cout << "Скорость - " << s * 60 / t << " км/ч";
+
+//_________________________
+//ЗАДАНИЕ 2
+
+	int start, end, duration, total;
+	int hour1, min1, sec1, hour2, min2, sec2;
+	std::cout << "Введите время начала (часы, минуты, секунды) - \n";
+	std::cin >> hour1 >> min1 >> sec1;
+	std::cout << "Введите время окончания (часы, минуты, секунды) - \n";
+	std::cin >> hour2 >> min2 >> sec2;
+
+	start = hour1 * 60 + sec1 / 60 + min1;
+	end = hour2 * 60 + sec1 / 60 + min2;
+	duration = end - start;
+
+	if (duration <= 0)
+	{
+		std::cout << "Ошибка";
+	}
+	else
+	{
+		total = duration * 2;
+		std::cout << "Стоимость поездки - " << total << " гривен\n";
+	}
+	
+//_________________________
+//ЗАДАНИЕ 3
+
+	double liters, total1, total2, total3;
+	double distance, consumption, price1, price2, price3;
+	std::cout << "Введите расстояние в киллометрах - ";
+	std::cin >> distance;
+	std::cout << "Введите расход бензина на 100 км: ";
+	std::cin >> consumption;
+	std::cout << "Введите стоимость за 1 литр первого вида бензина - ";
+	std::cin >> price1;
+	std::cout << "Введите стоимость за 1 литр второго вида бензина - ";
+	std::cin >> price2;
+	std::cout << "Введите стоимость за 1 литр третьего вида бензина - ";
+	std::cin >> price3;
+
+	liters = distance * consumption / 100;
+	total1 = liters * price1;
+	total2 = liters * price2;
+	total3 = liters * price3;
+
+	std::cout << "\n         Сравнительная таблица\n";
+	std::cout << "------------------------------------------\n";
+	std::cout << "Вид бензина | Стоимость поездки в рублях\n";
+	std::cout << "------------------------------------------\n";
+	std::cout << "1           | " << total1 << "\n";
+	std::cout << "2           | " << total2 << "\n";
+	std::cout << "3           | " << total3 << "\n";
+	std::cout << "------------------------------------------\n";
 
 	return 0;
 
